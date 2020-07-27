@@ -9,7 +9,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #fafafa;
+    background: #EAEAEA;
+    color: #B0BEC4;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -17,10 +18,15 @@ export default createGlobalStyle`
     font: 16px Nunito Sans, sans-serif;
   }
 
+  a {
+    text-decoration: none;
+
+  }
+
   #root {
-    max-width: 1200px;
+    /*max-width: 1300px;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 0px 45px; */
   }
 
   button {
