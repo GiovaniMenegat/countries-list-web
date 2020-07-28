@@ -3,8 +3,6 @@ import { FiSearch } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
-import Header from '../../components/Header';
-
 import { FormContainer, Form, Button, Country, CountrySection } from './styles';
 
 interface CountryInterface {
@@ -42,12 +40,14 @@ const Dashboard: React.FC = () => {
   }
 
   useEffect(() => {
-    try {
-      api.get<CountryInterface[]>(`region/${regionValue}`).then(response => {
-        setCountries(response.data);
-      });
-    } catch (error) {
-      console.log(error.message);
+    if (regionValue) {
+      try {
+        api.get<CountryInterface[]>(`region/${regionValue}`).then(response => {
+          setCountries(response.data);
+        });
+      } catch (error) {
+        console.log(error.message);
+      }
     }
   }, [regionValue]);
 
@@ -61,7 +61,6 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <Header />
       <FormContainer>
         <Form onSubmit={handleTextFilter}>
           <div>

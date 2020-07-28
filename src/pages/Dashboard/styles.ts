@@ -11,9 +11,10 @@ export const Form = styled.form`
   div {
     display: flex;
     width: 150%;
-    box-shadow: 0px 0px 6px 0px #e6dfdf;
-    background-color: #fff;
+    box-shadow: 0px 0px 6px 0px ${props => props.theme.colors.shadow};
+    background-color: ${props => props.theme.colors.input};
     padding: 8px;
+    border-radius: 3px;
     svg {
       vertical-align: bottom;
       margin-right: 10px;
@@ -25,7 +26,8 @@ export const Form = styled.form`
   }
   select {
     border: none;
-    background-color: #fff;
+    box-shadow: 0px 0px 6px 0px ${props => props.theme.colors.shadow};
+    background-color: ${props => props.theme.colors.input};
     padding: 13px 20px;
     border-radius: 5%;
   }
@@ -64,8 +66,8 @@ export const CountrySection = styled.div`
   a {
     margin-bottom: 30px;
     width: 180px;
-    background-color: #fff;
-    color: #3a3a3a;
+    background-color: ${props => props.theme.colors.input};
+    color: ${props => props.theme.colors.text};
     flex: 0 1 21%;
   }
 `;

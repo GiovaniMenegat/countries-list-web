@@ -9,8 +9,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #EAEAEA;
-    color: #B0BEC4;
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
     -webkit-font-smoothing: antialiased;
   }
 
@@ -18,9 +18,21 @@ export default createGlobalStyle`
     font: 16px Nunito Sans, sans-serif;
   }
 
+  button {
+    color: ${props => props.theme.colors.text};
+  }
+
+  input{
+    color: ${props => props.theme.colors.text};
+    background-color: ${props => props.theme.colors.input};
+  }
+
+  select {
+    color: ${props => props.theme.colors.text};
+  }
+
   a {
     text-decoration: none;
-
   }
 
   #root {

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch, Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
-import Header from '../../components/Header';
 
 import { Button, CountryInfo } from './styles';
 import api from '../../services/api';
@@ -25,6 +24,10 @@ interface CountryInterface {
   borders: [];
 }
 
+interface BordersName {
+  name: string;
+}
+
 interface Lenguages {
   name: string;
 }
@@ -35,6 +38,9 @@ interface Currencies {
 
 const Country: React.FC = () => {
   const [country, setCountry] = useState<CountryInterface[] | null>(null);
+  const [borderCountries, setBorderCountries] = useState<BordersName[] | null>(
+    [],
+  );
 
   const { params } = useRouteMatch<CountryParams>();
 
@@ -44,9 +50,22 @@ const Country: React.FC = () => {
     });
   }, [params.country]);
 
+  useEffect(() => {
+    if (country) {
+      api
+        .get(
+          `alpha?codes=${
+            country && country[0].borders.join(',').replace(/,/g, ';')
+          }`,
+        )
+        .then(response => {
+          setBorderCountries(response.data);
+        });
+    }
+  }, [country]);
+
   return (
     <>
-      <Header />
       <Link to="/">
         <Button type="button">
           <FiArrowLeft size={22} /> Back
@@ -102,6 +121,15 @@ const Country: React.FC = () => {
                   )}
                 </p>
               </div>
+            </div>
+            <div className="border-div">
+              <p>
+                <strong>Border Countries: </strong>
+                {borderCountries &&
+                  borderCountries.map(
+                    (b, index) => (index ? ', ' : '') + b.name,
+                  )}
+              </p>
             </div>
           </div>
         </CountryInfo>

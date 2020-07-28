@@ -1,16 +1,33 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
+import usePersistedState from './utils/usePersistedState';
+
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
 
 import GlobalStyle from './styles/global';
 import Routes from './routes';
+import Header from './components/Header';
 
-const App: React.FC = () => (
-  <>
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
-    <GlobalStyle />
-  </>
-);
+const App: React.FC = () => {
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
+
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? dark : light);
+  };
+
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <Header toggleTheme={toggleTheme} theme={theme} />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+        <GlobalStyle />
+      </ThemeProvider>
+    </>
+  );
+};
 
 export default App;

@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  color: #3a3a3a;
-  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 1px 1px 6px 0px #e6dfdf;
+  box-shadow: 1px 1px 6px 0px ${props => props.theme.colors.shadow};
   padding: 30px 80px 20px;
   a {
     text-decoration: none;
-    color: #3a3a3a;
+    color: ${props => props.theme.colors.text};
   }
   div {
     cursor: pointer;
@@ -21,7 +19,7 @@ export const Header = styled.header`
 
     button {
       border: none;
-      background-color: #fff;
+      background-color: transparent;
       font-weight: 600;
     }
   }

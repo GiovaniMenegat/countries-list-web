@@ -6,7 +6,7 @@ export const Button = styled.button`
   padding: 5px 20px;
   border: none;
   background: transparent;
-  box-shadow: 0px 0px 5px 3px #e6dfdf;
+  box-shadow: 0px 0px 5px 3px ${props => props.theme.colors.shadow};
   border-radius: 5px;
   svg {
     vertical-align: bottom;
@@ -15,7 +15,7 @@ export const Button = styled.button`
 `;
 
 export const CountryInfo = styled.div`
-  color: #3a3a3a;
+  color: ${props => props.theme.colors.text};
   display: flex;
   margin: 30px 80px;
   img {
@@ -34,6 +34,9 @@ export const CountryInfo = styled.div`
     .information-detail {
       justify-content: space-between;
       display: flex;
+    }
+    .border-div {
+      margin-top: 30px;
     }
   }
 `;
