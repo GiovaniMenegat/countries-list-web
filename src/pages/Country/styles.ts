@@ -12,6 +12,9 @@ export const Button = styled.button`
     vertical-align: bottom;
     margin-right: 10px;
   }
+  @media (max-width: 825px) {
+    margin: 30px 40px;
+  }
 `;
 
 export const CountryInfo = styled.div`
@@ -37,6 +40,26 @@ export const CountryInfo = styled.div`
     }
     .border-div {
       margin-top: 30px;
+    }
+  }
+  @media (max-width: 825px) {
+    display: block;
+    margin: 30px 40px;
+    img {
+      width: 100%;
+    }
+    .information {
+      width: 100%;
+      margin: 30px 0;
+      h2 {
+        margin-bottom: 20px;
+      }
+      .information-detail {
+        display: block;
+        .right-div {
+          margin-top: 30px;
+        }
+      }
     }
   }
 `;

@@ -51,7 +51,7 @@ const Dashboard: React.FC = () => {
     }
   }, [regionValue]);
 
-  function handleCleanFilters() {
+  function handleClearFilters() {
     setSearchValue('');
     setRegionValue('');
     api.get('/all').then(response => {
@@ -91,7 +91,7 @@ const Dashboard: React.FC = () => {
               <option value="Oceania">Oceania</option>
             </select>
           </label>
-          <Button onClick={handleCleanFilters}>Clean filters</Button>
+          <Button onClick={handleClearFilters}>Clear filters</Button>
         </Form>
       </FormContainer>
 

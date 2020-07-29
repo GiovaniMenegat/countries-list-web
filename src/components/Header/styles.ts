@@ -23,4 +23,18 @@ export const Header = styled.header`
       font-weight: 600;
     }
   }
+  @media (max-width: 825px) {
+    padding: 30px 40px 20px;
+    h2 {
+      font-size: 16px;
+    }
+    div {
+      svg {
+        width: 20px;
+      }
+      button: {
+        font-size: 16px;
+      }
+    }
+  }
 `;

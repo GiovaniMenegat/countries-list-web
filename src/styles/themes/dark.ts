@@ -9,6 +9,6 @@ export default {
     text: 'hsl(0, 0%, 100%)',
     input: 'hsl(209, 23%, 22%)',
     select: 'hsl(209, 23%, 22%)',
-    shadow: '#5f5f5f',
+    shadow: '#1f1f1f',
   },
 };

@@ -4,6 +4,11 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 30px 80px;
+
+  @media (max-width: 825px) {
+    display: flow-root;
+    margin: 30px 40px;
+  }
 `;
 
 export const Form = styled.form`
@@ -31,6 +36,16 @@ export const Form = styled.form`
     padding: 13px 20px;
     border-radius: 5%;
   }
+  @media (max-width: 825px) {
+    div {
+      width: 100%;
+      input {
+      }
+    }
+    select {
+      margin-top: 30px;
+    }
+  }
 `;
 
 export const Button = styled.button`
@@ -54,6 +69,11 @@ export const Country = styled.div`
       margin-bottom: 10px;
     }
   }
+  @media (max-width: 825px) {
+    img {
+      width: 260px;
+    }
+  }
 `;
 
 export const CountrySection = styled.div`
@@ -69,5 +89,14 @@ export const CountrySection = styled.div`
     background-color: ${props => props.theme.colors.input};
     color: ${props => props.theme.colors.text};
     flex: 0 1 21%;
+  }
+  @media (max-width: 825px) {
+    margin-left: 40px;
+    margin-right: 40px;
+    a {
+      margin: 0 auto;
+      margin-bottom: 30px;
+      width: 260px;
+    }
   }
 `;
