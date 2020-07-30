@@ -1,10 +1,10 @@
 # Countries List Web
 ### A list of all countries and main information of each country.
 
-![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/countries-list-light_lguwbb.jpg)
-![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/countries-list-dark_i1quhe.jpg)
-![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/country-brazil-light_cktnse.jpg)
-![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596118828/countries-list-mobile_znbjjn.jpg)
+![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/countries-list/countries-list-light_lguwbb.jpg)
+![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/countries-list/countries-list-dark_i1quhe.jpg)
+![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/countries-list/country-brazil-light_cktnse.jpg)
+![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596118828/countries-list/countries-list-mobile_znbjjn.jpg)
 
 ## The project
 This project was idealized by [Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). It's a app that display country data from [Rest Countries API](http://restcountries.eu/), and it has some functionalities, like:
