@@ -40,6 +40,15 @@ export const CountryInfo = styled.div`
     }
     .border-div {
       margin-top: 30px;
+      a {
+        display: inline-block;
+        border-radius: 3px;
+        box-shadow: 0px 0px 5px 3px ${props => props.theme.colors.shadow};
+        background-color: ${props => props.theme.colors.input};
+        color: ${props => props.theme.colors.text};
+        margin: 7px;
+        padding: 7px 15px;
+      }
     }
   }
   @media (max-width: 825px) {

@@ -123,13 +123,13 @@ const Country: React.FC = () => {
               </div>
             </div>
             <div className="border-div">
-              <p>
-                <strong>Border Countries: </strong>
-                {borderCountries &&
-                  borderCountries.map(
-                    (b, index) => (index ? ', ' : '') + b.name,
-                  )}
-              </p>
+              <strong>Border Countries: </strong>
+              {borderCountries &&
+                borderCountries.map(b => (
+                  <Link to={`/country/${b.name}`} key={b.name}>
+                    {b.name}
+                  </Link>
+                ))}
             </div>
           </div>
         </CountryInfo>
