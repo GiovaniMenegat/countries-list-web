@@ -1,13 +1,22 @@
 # Countries List Web
-## A list of all countries and main information of each country.
+### A list of all countries and main information of each country.
 
 ![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/countries-list-light_lguwbb.jpg)
 ![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/countries-list-dark_i1quhe.jpg)
 ![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/country-brazil-light_cktnse.jpg)
-![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596117006/contry-brazil-dark_qshiip.jpg)
+![App Screenshot](https://res.cloudinary.com/dlyk8besh/image/upload/v1596118828/countries-list-mobile_znbjjn.jpg)
+
+## The project
+This project was idealized by [Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). It's a app that display country data from [Rest Countries API](http://restcountries.eu/), and it has some functionalities, like:
+
+- See all countries from the API on the homepage;
+- Search for a country using an input field;
+- Filter countries by region;
+- Click on a country to see more detailed information on a separate page;
+- Toggle the color scheme between light and dark mode.
 
 ## Technologies
-This project was developed at the [Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) and consumes the [Rest Countries API](http://restcountries.eu/), with the following technologies:
+This project uses the following technologies:
 
 - [ReactJS](https://reactjs.org/)
 - [Typescript](https://www.notion.so/Typescript-5712aeab312d44fcba0aa88895caad36)
@@ -34,3 +43,5 @@ $ yarn
 # Run the app
 $ yarn start
 ```
+---
+[Get in touch!](https://www.linkedin.com/in/giovani-menegat-b49bb270/):smile:
